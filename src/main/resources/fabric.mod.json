@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "auto-texturepacks",
+	"version": "${version}",
+	"name": "Auto Texture Packs",
+	"description": "Re-applies your resource/texture packs in the saved order shortly after the game finishes loading.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/auto-texturepacks/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.autopacks.AutoPacksMod"
+		],
+		"modmenu": [
+			"com.autopacks.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"auto-texturepacks.mixins.json",
+		{
+			"config": "auto-texturepacks.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
